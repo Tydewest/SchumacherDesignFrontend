@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default async function Page() {
-  const response = await fetch('https://api.npoint.io/08218aba4cde57fddd58', { cache: 'no-store' });
+  const response = await fetch('https://api.npoint.io/08218aba4cde57fddd58');
 
   if (!response.ok) {
     throw new Error('Failed to fetch Location Data');
