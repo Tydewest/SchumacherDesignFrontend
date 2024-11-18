@@ -54,7 +54,7 @@ export default async function Page() {
                   <path d="m15 5 4 4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold dark:text-white">Web Design</h3>
+              <div className="text-xl font-bold dark:text-white">Web Design</div>
               <p className="text-gray-500 dark:text-gray-400">
                 We create visually appealing, user-friendly websites that balance aesthetics and functionality. Our designs ensure seamless navigation, responsiveness, and alignment with your brand.
               </p>
@@ -69,7 +69,7 @@ export default async function Page() {
                   <path d="m14.5 4-5 16" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold dark:text-white">Web Development</h3>
+              <div className="text-xl font-bold dark:text-white">Web Development</div>
               <p className="text-gray-500 dark:text-gray-400">
                 We develop robust, scalable websites that are built to perform. From backend to frontend, we ensure smooth and secure user experiences with solutions that grow with your business.
               </p>
@@ -86,7 +86,7 @@ export default async function Page() {
                   <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold dark:text-white">Graphic Design</h3>
+              <div className="text-xl font-bold dark:text-white">Graphic Design</div>
               <p className="text-gray-500 dark:text-gray-400">
                 We design graphics that capture your brand&apos;s essence. Whether it&apos;s marketing materials, digital assets, or branding, our designs engage audiences and communicate your message effectively.
               </p>
