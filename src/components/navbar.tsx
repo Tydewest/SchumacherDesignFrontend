@@ -1,78 +1,72 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, House, Info, GalleryVerticalEnd, PocketKnife, Mailbox } from "lucide-react";
+
+const navigationLinks = [
+  { link: "/", label: "Home.", icon: <House size={20} /> },
+  { link: "/about", label: "About.", icon: <Info size={20} /> },
+  { link: "/work", label: "Work.", icon: <GalleryVerticalEnd size={20} /> },
+  { link: "/services", label: "Services.", icon: <PocketKnife size={20} /> },
+  { link: "/contact", label: "Contact.", icon: <Mailbox size={20} /> },
+];
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const navLinks = [
-        { href: "/", label: "Home." },
-        { href: "/about", label: "About." },
-        { href: "/work", label: "Work." },
-        { href: "/services", label: "Services." },
-        { href: "/process", label: "Process." },
-        { href: "/contact", label: "Contact." },
-    ];
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-    return (
-        <header>
-            <div className="flex justify-between items-center px-4 max-w-full flex-wrap">
-                <Link href="/" className="flex space-x-2">
-                    <Image 
-                        src="https://www.docker.com/wp-content/uploads/2024/01/icon-new.svg" 
-                        alt="logo" 
-                        width={1000} 
-                        height={1000} 
-                        className="w-16 h-16 cursor-auto" 
-                    />
-                </Link>
-                <button className="lg:hidden block h-6 w-6 cursor-pointer" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation">
-                    {isOpen ? (
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path d="M18 6L6 18" />
-                            <path d="M6 6l12 12" />
-                        </svg>
-                    ) : (
-                        // SVG for the "open" state
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path d="M3 6h18" />
-                            <path d="M3 12h18" />
-                            <path d="M3 18h18" />
-                        </svg>
-                    )}
-                </button>
-                <nav className={`${isOpen ? "block" : "hidden"} lg:flex lg:items-center lg:w-auto w-full`}>
-                    <ul className="text-base lg:flex lg:justify-between">
-                        {navLinks.map((link) => (
-                            <li key={link.label} className="lg:px-3 py-2 hover:text-blue-500 font-semibold">
-                                <Link href={link.href}>{link.label}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    );
+  return (
+    <nav className="p-3 bg-neutral-900 flex justify-between items-center relative">
+      {/* Logo */}
+      <Link href="/" className="flex items-center space-x-3">
+        <div aria-label="About">
+          <Image
+            src="/avatar.jpg"
+            alt="Lachy Schumacher avatar"
+            width={32}
+            height={32}
+            className="rounded-full object-cover"
+            priority
+          />
+        </div>
+        <div className="text-xl font-bold" aria-label="Home">
+          Lachy Schumacher Design.
+        </div>
+      </Link>
+
+      {/* Menu button */}
+      <div className="relative">
+        <button
+          onClick={toggleMenu}
+          className="p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Dropdown Menu */}
+        {isOpen && (
+         <div className="absolute bg-neutral-900 right-0 top-full mt-2 w-48 shadow-2xl rounded-lg p-2 z-50">
+         <ul className="space-y-2">
+             {navigationLinks.map((links) => (
+                 <li key={links.link}>
+                     <Link
+                         href={links.link}
+                         className='p-2 flex items-center space-x-2 rounded-lg text-white hover:bg-neutral-800'
+                         onClick={() => setIsOpen(false)}
+                     >
+                         {links.icon}
+                         <span>{links.label}</span>
+                     </Link>
+                 </li>
+             ))}
+         </ul>
+     </div>
+        )}
+      </div>
+    </nav>
+  );
 }
