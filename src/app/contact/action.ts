@@ -4,8 +4,6 @@ import { revalidatePath } from "next/cache";
 
 export default async function SendWebEnquiry(formData: FormData) {
 
-    const RESEND_API_KEY = 're_HvgeoKns_8kTD7HL8nZeRfcyLpPjgU2kT';
-
     const name = formData.get("name");
     const email = formData.get("email");
     const phone = formData.get("phone");
@@ -17,10 +15,10 @@ export default async function SendWebEnquiry(formData: FormData) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${RESEND_API_KEY}`,
+            'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
           },
           body: JSON.stringify({
-            from: 'Web Form Submission <submission@forms.dynaserve.io>',
+            from: 'LSD Web Form<WebForm@dynaserve.io>',
             to: 'WebMessages@dynaserve.io',
             subject: 'New Form Submission Received',
             html: `<strong>New Web Form Submission Received</strong><dl><dt><b>Name:</b><dd><i>${name}</i><dt><b>Email:</b><dd><i>${email}</i><dt><b>Phone:</b><dd><i>${phone}</i><dt><b>Subject:</b><dd><i>${subject}</i><dt><b>Message:</b><dd><i>${message}</i></dl>`,
