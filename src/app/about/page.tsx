@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import {
   Leaf,
-  Shield,
+  Handshake,
   Users,
   CheckCircle,
   Rocket,
@@ -19,9 +19,9 @@ export default function Page() {
       <div className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 gap-8">
         {/* Text Content */}
         <div className="flex-1 max-w-2xl mt-8 lg:mt-0 lg:text-left">
-          <div className="font-display text-5xl font-bold tracking-tight sm:text-6xl mb-6">
+          <h1 className="font-display text-5xl font-bold tracking-tight sm:text-6xl mb-6">
             About Me.
-          </div>
+          </h1>
           <div className="text-xl sm:text-2xl font-light text-neutral-300">
             Hi, I’m Lachy — the designer, developer, and creative force behind
             Lachy Schumacher Design. What started as a side project to channel
@@ -62,13 +62,8 @@ export default function Page() {
 
           {/* Subtext */}
           <div className="mt-2 mb-8 text-lg sm:text-xl font-light text-neutral-300">
-            Explore our comprehensive suite of services designed to empower your
-            brand in the digital landscape. Whether you’re looking for
-            eye-catching web design, robust web development, or a complete brand
-            overhaul, we provide innovative solutions that enhance user
-            experience, drive traffic, and elevate your online presence. With
-            expertise in SEO, UI/UX design, and graphic design, we ensure your
-            brand stands out and thrives in a competitive digital world.
+          Our work is grounded in a set of unwavering core principles: sustainability, ethics, collaboration, authenticity, innovation, impact, simplicity, transparency, and excellence.
+          These values guide every aspect of our services — from initial concept through to delivery. We take a thoughtful, purpose-driven approach to each project, ensuring outcomes that are not only visually compelling but also responsible, enduring, and aligned with our clients’ long-term goals. Through open collaboration and a commitment to excellence, we deliver digital solutions that are as principled as they are effective.
           </div>
 
           {/* Principles Grid */}
@@ -90,7 +85,7 @@ export default function Page() {
             {/* Ethical */}
             <div>
               <div className="flex justify-start items-center w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                <Shield strokeWidth={1.5} />
+                <Handshake strokeWidth={1.5} />
               </div>
               <div className="text-xl font-bold dark:text-white">Ethical</div>
               <p className="text-gray-500 dark:text-gray-400">

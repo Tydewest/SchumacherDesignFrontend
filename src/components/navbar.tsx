@@ -3,14 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, House, Info, GalleryVerticalEnd, PocketKnife, Mailbox } from "lucide-react";
+import { Menu, X, Home, CircleUser, Briefcase, PencilRuler, Mail } from "lucide-react";
 
 const navigationLinks = [
-  { link: "/", label: "Home.", icon: <House size={20} /> },
-  { link: "/about", label: "About.", icon: <Info size={20} /> },
-  { link: "/work", label: "Work.", icon: <GalleryVerticalEnd size={20} /> },
-  { link: "/services", label: "Services.", icon: <PocketKnife size={20} /> },
-  { link: "/contact", label: "Contact.", icon: <Mailbox size={20} /> },
+  { link: "/", label: "Home.", icon: <Home size={20} /> },
+  { link: "/about", label: "About.", icon: <CircleUser size={20} /> },
+  { link: "/work", label: "Work.", icon: <Briefcase size={20} /> },
+  { link: "/services", label: "Services.", icon: <PencilRuler size={20} /> },
+  { link: "/contact", label: "Contact.", icon: <Mail size={20} /> },
+  // { link: "/blog", label: "Blog.", icon: <Newspaper size={20} />}
 ];
 
 export default function Navbar() {
@@ -49,22 +50,22 @@ export default function Navbar() {
 
         {/* Dropdown Menu */}
         {isOpen && (
-         <div className="absolute bg-neutral-900 right-0 top-full mt-2 w-48 shadow-2xl rounded-lg p-2 z-50">
-         <ul className="space-y-2">
-             {navigationLinks.map((links) => (
-                 <li key={links.link}>
-                     <Link
-                         href={links.link}
-                         className='p-2 flex items-center space-x-2 rounded-lg text-white hover:bg-neutral-800'
-                         onClick={() => setIsOpen(false)}
-                     >
-                         {links.icon}
-                         <span>{links.label}</span>
-                     </Link>
-                 </li>
-             ))}
-         </ul>
-     </div>
+          <div className="absolute bg-neutral-900 right-0 top-full mt-2 w-48 shadow-2xl rounded-lg p-2 z-50">
+            <ul className="space-y-2">
+              {navigationLinks.map((links) => (
+                <li key={links.link}>
+                  <Link
+                    href={links.link}
+                    className='p-2 flex items-center space-x-2 rounded-lg text-white hover:bg-neutral-800'
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {links.icon}
+                    <span>{links.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
     </nav>

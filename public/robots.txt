@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.tydewest.com
+
+# Sitemaps
+Sitemap: https://www.tydewest.com/sitemap.xml

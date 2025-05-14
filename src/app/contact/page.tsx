@@ -68,28 +68,28 @@ export default async function Page() {
                         <form action={SendWebEnquiry} className="space-y-6">
                             {/* Name */}
                             <div className="group relative z-0">
-                                <input id="name" name="name" type="text" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-4 focus:ring-neutral-100/10 rounded-xl" placeholder=" " />
-                                <label htmlFor="name" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Name</label>
-                            </div>
+    <input id="name" name="name" type="text" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
+    <label htmlFor="name" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Name</label>
+</div>
                             {/* Email */}
                             <div className="group relative z-0">
-                                <input id="email" name="email" type="email" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-4 focus:ring-neutral-100/10 rounded-xl" placeholder=" " />
-                                <label htmlFor="email" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Email</label>
+                                <input id="email" name="email" type="email" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
+                                <label htmlFor="email" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Email</label>
                             </div>
                             {/* Phone Number */}
                             <div className="group relative z-0">
-                                <input id="phone" name="phone" type="tel" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-4 focus:ring-neutral-100/10 rounded-xl" placeholder=" " />
-                                <label htmlFor="phone" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Phone</label>
+                                <input id="phone" name="phone" type="tel" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
+                                <label htmlFor="phone" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Phone</label>
                             </div>
                             {/* Subject */}
                             <div className="group relative z-0">
-                                <input id="subject" name="subject" type="text" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-4 focus:ring-neutral-100/10 rounded-xl" placeholder=" " />
-                                <label htmlFor="subject" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Subject</label>
+                                <input id="subject" name="subject" type="text" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
+                                <label htmlFor="subject" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Subject</label>
                             </div>
                             {/* Message */}
                             <div className="group relative z-0">
-                                <input id="message" name="message" type="tetextl" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-4 focus:ring-neutral-100/10 rounded-xl" placeholder=" " />
-                                <label htmlFor="message" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Message</label>
+                                <input id="message" name="message" type="tetextl" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
+                                <label htmlFor="message" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Message</label>
                             </div>
                             {/* Submit Button */}
                             <div>
