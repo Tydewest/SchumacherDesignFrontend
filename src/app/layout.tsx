@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Lachy Schumacher Design",
     images: [
       {
-        url: "https://static.tydewest.com/og-image.jpg", // Update this to your actual OG image path
+        url: "https://tydewest.com/home-og-image.jpg", // Update this to your actual OG image path
         width: 1200,
         height: 630,
         alt: "Lachy Schumacher Design – High-Impact Web Design",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Home • Lachy Schumacher Design",
     description: "Bespoke, high-impact web design that transforms brands.",
-    images: ["https://static.tydewest.com/og-image.jpg"],
+    images: ["https://tydewest.com/home-og-image.jpg"],
     creator: "@tydewest", // Replace or remove if not applicable
   },
 };

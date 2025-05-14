@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Lachy Schumacher Design",
     images: [
       {
-        url: "https://static.tydewest.com/og-about.jpg", // Replace with your actual OG image URL
+        url: "https://tydewest.com/about-og-about.jpg", // Replace with your actual OG image URL
         width: 1200,
         height: 630,
         alt: "About Lachy Schumacher Design",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "About • Lachy Schumacher Design",
     description:
       "Meet Lachy Schumacher, the creative mind behind our premium web design studio based in Australia.",
-    images: ["https://static.tydewest.com/og-about.jpg"],
+    images: ["https://tydewest.com/about-og-about.jpg"],
     creator: "@tydewest", // Remove or update if not applicable
   },
 };
