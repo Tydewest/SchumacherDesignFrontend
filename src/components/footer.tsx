@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t mt-24 pt-12 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 text-sm text-neutral-500">
+      <div className="border-t mt-24 pt-12 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 text-sm text-neutral-300">
   <div>Copyright © 2020 – 2025 Lachy Schumacher Design. All rights reserved.</div>
   <div>
     Designed by{' '}

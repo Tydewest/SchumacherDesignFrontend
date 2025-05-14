@@ -19,7 +19,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="p-3 bg-neutral-900 flex justify-between items-center relative">
+    <nav className="p-4 bg-neutral-900 flex justify-between items-center relative">
       {/* Logo */}
       <Link href="/" className="flex items-center space-x-3">
         <div aria-label="About">
