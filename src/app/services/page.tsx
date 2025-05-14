@@ -38,7 +38,7 @@ export default function Page() {
         {/* Text Content */}
         <div className="flex-1 max-w-2xl mt-8 lg:mt-0 lg:text-left">
           <h1 className="font-display text-5xl font-bold tracking-tight sm:text-6xl mb-6">
-            Work
+            Services.
           </h1>
           <div className="text-xl sm:text-2xl font-light text-neutral-300">
             I&apos;m a designer and developer based between Sydney & Brisbane, creating high-impact websites where form meets function. I build blazing-fast, beautifully responsive digital experiences from the ground up — no off-the-shelf templates, just handcrafted design and clean, purposeful code tailored to each client&apos;s unique vision. Whether you&apos;re launching a bold new brand or refining a digital product, I bring the creative eye of a designer and the technical precision of a developer to every project.

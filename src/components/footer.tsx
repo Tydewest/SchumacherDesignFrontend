@@ -4,30 +4,30 @@ import Image from 'next/image';
 
 const footerLinks = [
   {
-    title: 'Product',
+    title: 'Services',
     links: [
-      { name: 'A1', href: '/work/family-fund' },
-      { name: 'B2', href: '/work/unseal' },
-      { name: 'C3', href: '/work/phobia' },
-      { name: 'See all →', href: '/work' },
+      { name: 'Web Design', href: '/services' },
+      { name: 'Web Development', href: '/services' },
+      { name: 'Graphic Design', href: '/services' },
+      { name: 'See all →', href: '/services' },
     ],
   },
   {
-    title: 'Company',
+    title: 'Resources',
     links: [
-      { name: 'A', href: '/work/family-fund' },
-      { name: 'B', href: '/work/unseal' },
-      { name: 'C', href: '/work/phobia' },
-      { name: 'See all →', href: '/work' },
+      { name: 'About', href: '/About' },
+      { name: 'My Work', href: '/work' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Vinyl Collection', href: 'https://collection.tydewest.com' },
     ],
   },
   {
-    title: 'Legal',
+    title: 'Socials',
     links: [
-      { name: 'Facebook', href: 'https://facebook.com' },
-      { name: 'Instagram', href: 'https://instagram.com' },
-      { name: 'LinkedIn', href: 'https://github.com' },
-      { name: 'Dribbble', href: 'https://dribbble.com' },
+      { name: 'Facebook', href: 'https://facebook.com/lachyschumacherdesign' },
+      { name: 'Instagram', href: 'https://instagram.com/lachyschumacherdesign' },
+      { name: 'Twitter', href: 'https://github.com/lachyschumacherdesign' },
+      { name: 'Dribbble', href: 'https://dribbble.com/lachyschumacherdesign' },
     ],
   },
 ];
