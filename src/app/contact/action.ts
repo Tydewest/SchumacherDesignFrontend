@@ -9,7 +9,7 @@ export default async function SendWebEnquiry(formData: FormData) {
     const phone = formData.get("phone");
     const subject = formData.get("subject");
     const message = formData.get("message");
-    const device = fromData.get("device");
+    const device = formData.get("device");
     const userAgent = formData.get("userAgent")
 
 
