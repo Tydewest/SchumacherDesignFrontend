@@ -71,7 +71,6 @@ export default async function Page() {
                             Message Me
                         </div>
                         <form action={SendWebEnquiry} className="space-y-6">
-                            const userAgent = headersList.get('user-agent')
                             {/* Name */}
                             <div className="group relative z-0">
                                 <input id="name" name="name" type="text" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
