@@ -18,7 +18,7 @@ export default async function Page() {
     
 
     return (
-        <main className="bg-neutral-900 text-white">
+        <div className="bg-neutral-900 text-white">
             <div className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 gap-8">
 
                 {/* Text Content */}
@@ -104,6 +104,6 @@ export default async function Page() {
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     );
 }
