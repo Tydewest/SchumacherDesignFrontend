@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { headers } from 'next/headers'
-import { userAgent } from 'next/server'
 import Image from "next/image";
 import SendWebEnquiry from "@/app/contact/action"
 
@@ -15,10 +14,8 @@ export default async function Page() {
     const LocationData = await respone.json();
 
     const headersList = await headers()
-    const userAgentDetected = headersList.get('user-agent')
+    const userAgent = headersList.get('user-agent')
 
-    const { device } = userAgent(Request)
-    const deviceType = device.type || 'unknown'
 
     return (
         <div className="bg-neutral-900 text-white">
@@ -100,8 +97,8 @@ export default async function Page() {
                                 <label htmlFor="message" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Message</label>
                             </div>
                             <div>
-                                <input type="hidden" name="deviceType" value={`${deviceType}`} />
-                                <input type="hidden" name="userAgentDetected" value={`${userAgentDetected}`} />
+                                <input type="hidden" name="deviceType" value={'unknown'} />
+                                <input type="hidden" name="userAgent" value={`${userAgent}`} />
                                 <button type="submit" className="w-full py-3 px-6 text-lg font-semibold text-neutral-900 bg-neutral-100 rounded-lg transition-all hover:bg-neutral-200 focus:outline-none focus:ring-4 focus:ring-neutral-300 disabled:bg-neutral-600 disabled:cursor-not-allowed">Send</button>
                             </div>
                         </form>
