@@ -15,7 +15,7 @@ export default async function Page() {
     const LocationData = await respone.json();
 
     const headersList = await headers()
-    const userAgent = headersList.get('user-agent')
+    const userAgentDetected = headersList.get('user-agent')
 
     const { device } = userAgent(request)
     const deviceType = device.type || 'unknown'
@@ -101,7 +101,7 @@ export default async function Page() {
                             </div>
                             <div>
                                 <input type="hidden" name="deviceType" value={`${deviceType}`} />
-                                <input type="hidden" name="userAgent" value={`${userAgent}`} />
+                                <input type="hidden" name="userAgentDetected" value={`${userAgentDetected}`} />
                                 <button type="submit" className="w-full py-3 px-6 text-lg font-semibold text-neutral-900 bg-neutral-100 rounded-lg transition-all hover:bg-neutral-200 focus:outline-none focus:ring-4 focus:ring-neutral-300 disabled:bg-neutral-600 disabled:cursor-not-allowed">Send</button>
                             </div>
                         </form>
