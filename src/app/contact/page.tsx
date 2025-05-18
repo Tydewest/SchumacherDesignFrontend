@@ -17,7 +17,7 @@ export default async function Page() {
     const headersList = await headers()
     const userAgentDetected = headersList.get('user-agent')
 
-    const { device } = userAgent(request)
+    const { device } = userAgent(Request)
     const deviceType = device.type || 'unknown'
 
     return (
