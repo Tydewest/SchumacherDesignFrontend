@@ -14,7 +14,7 @@ export default async function Page() {
     const LocationData = await respone.json();
 
     const headersList = await headers()
-    const userAgent = headersList.get('user-agent')
+    
 
     return (
         <main className="bg-neutral-900 text-white">
@@ -70,6 +70,7 @@ export default async function Page() {
                             Message Me
                         </div>
                         <form action={SendWebEnquiry} className="space-y-6">
+                            const userAgent = headersList.get('user-agent')
                             {/* Name */}
                             <div className="group relative z-0">
                                 <input id="name" name="name" type="text" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
@@ -95,8 +96,6 @@ export default async function Page() {
                                 <input id="message" name="message" type="tetextl" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
                                 <label htmlFor="message" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Message</label>
                             </div>
-                            {/* Submit Button */}
-                            <div>`tel:${userAgent}`</div>
 
                             <div>
                                 <button type="submit" className="w-full py-3 px-6 text-lg font-semibold text-neutral-900 bg-neutral-100 rounded-lg transition-all hover:bg-neutral-200 focus:outline-none focus:ring-4 focus:ring-neutral-300 disabled:bg-neutral-600 disabled:cursor-not-allowed">Send</button>
