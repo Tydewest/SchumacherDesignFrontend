@@ -97,7 +97,7 @@ export default async function Page() {
                                 <label htmlFor="message" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Message</label>
                             </div>
                             <div>
-                                <input type="hidden" name="userAgent" value={`UA:${userAgent}`} />
+                                <input type="hidden" name="userAgent" value={`${userAgent}`} />
                                 <button type="submit" className="w-full py-3 px-6 text-lg font-semibold text-neutral-900 bg-neutral-100 rounded-lg transition-all hover:bg-neutral-200 focus:outline-none focus:ring-4 focus:ring-neutral-300 disabled:bg-neutral-600 disabled:cursor-not-allowed">Send</button>
                             </div>
                         </form>
