@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { headers } from 'next/headers'
+import { NextRequest, NextResponse, userAgent } from 'next/server'
 import Image from "next/image";
 import SendWebEnquiry from "@/app/contact/action"
 
@@ -15,7 +16,9 @@ export default async function Page() {
 
     const headersList = await headers()
     const userAgent = headersList.get('user-agent')
-    
+
+    const { device } = userAgent(request)
+    const deviceType = device.type || 'desktop'
 
     return (
         <div className="bg-neutral-900 text-white">
