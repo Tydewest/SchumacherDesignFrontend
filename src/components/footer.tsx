@@ -6,10 +6,10 @@ const footerLinks = [
   {
     title: 'Services',
     links: [
-      { name: 'Web Design', href: '/services' },
-      { name: 'Web Development', href: '/services' },
-      { name: 'Graphic Design', href: '/services' },
-      { name: 'See all →', href: '/services' },
+      { name: 'Web Design', href: '/a' },
+      { name: 'Web Development', href: '/b' },
+      { name: 'Graphic Design', href: '/c' },
+      { name: 'See all →', href: '/d' },
     ],
   },
   {
