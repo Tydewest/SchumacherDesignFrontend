@@ -103,10 +103,9 @@ export default async function Page() {
                                 <input id="message" name="message" type="text" required={true} className="peer block w-full px-6 py-4 text-base text-neutral-100 bg-transparent border border-neutral-700 focus:border-neutral-100 focus:ring-2 focus:ring-neutral-100/10 focus:outline-none rounded-xl" placeholder=" " />
                                 <label htmlFor="message" className="absolute left-6 top-1/2 -mt-3 origin-left text-base text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-neutral-100 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:text-neutral-100">Message</label>
                             </div>
-
                             <div>
                                 <input type="hidden" name="ipAddress" value={`${location.query}`} />
-                                <input type="hidden" name="location" value={`${location.city}, ${location.regionName}, ${location.country}, ${location.zip}`} />
+                                <input type="hidden" name="location" value={`${location.city}, ${location.regionName}, ${location.country}`} />
                                 <input type="hidden" name="userAgent" value={`${userAgent}`} />
                             </div>
                             <div>

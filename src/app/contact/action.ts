@@ -24,7 +24,7 @@ export default async function SendWebEnquiry(formData: FormData) {
             from: 'LSD Web Form<WebForm@dynaserve.io>',
             to: 'WebMessages@dynaserve.io',
             subject: 'New Form Submission Received',
-            html: `<strong>New Web Form Submission Received</strong><dl><dt><b>Name:</b><dd><i>${name}</i><dt><b>Email:</b><dd><i>${email}</i><dt><b>Phone:</b><dd><i>${phone}</i><dt><b>Subject:</b><dd><i>${subject}</i><dt><b>Message:</b><dd><i>${message}</i></dl><b>User Metadata:</b><dd><i>${ipAddress}</i><br/><i>${location}</dl><br/><i>${userAgent}</dl>`,
+            html: `<strong>New Web Form Submission Received</strong><dl><dt><b>Name:</b><dd><i>${name}</i><dt><b>Email:</b><dd><i>${email}</i><dt><b>Phone:</b><dd><i>${phone}</i><dt><b>Subject:</b><dd><i>${subject}</i><dt><b>Message:</b><dd><i>${message}</i></dl><b>User Metadata:</b><dd><i>${ipAddress}</i>><i>${location}</dl><i>${userAgent}</dl>`,
           }),
         });
         revalidatePath('/contact')
