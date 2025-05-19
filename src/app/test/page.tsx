@@ -8,7 +8,7 @@ export default async function Page() {
     (await headersList).get('x-real-ip') ||
     '0.0.0.0';
 
-  const res = await fetch(`http://ip-api.com/json/${ip}?fields=country,regionName,city,query`, {
+  const res = await fetch(`http://ip-api.com/json/${ip}?fields=zip,country,regionName,city,query`, {
     cache: 'no-store',
   });
 
@@ -17,10 +17,7 @@ export default async function Page() {
   return (
     <main className="p-4">
       <h1>IP Geolocation</h1>
-      <p>IP: {location.query}</p>
-      <p>City: {location.city}</p>
-      <p>Region: {location.regionName}</p>
-      <p>Country: {location.country}</p>
+      <p>{location.city}, {location.regionName}, {location.country}, {location.zip} </p>
     </main>
   );
 }
