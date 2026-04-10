@@ -1,70 +1,99 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-const footerLinks = [
+const FOOTER_SECTIONS = [
   {
-    title: 'Services',
+    title: "Services",
     links: [
-      { name: 'Web Design', href: '/a' },
-      { name: 'Web Development', href: '/b' },
-      { name: 'Graphic Design', href: '/c' },
-      { name: 'See all →', href: '/d' },
+      { name: "Web Design", href: "/services" },
+      { name: "Web Development", href: "/services" },
+      { name: "Graphic Design", href: "/services" },
+      { name: "See all →", href: "/services" },
     ],
   },
   {
-    title: 'Resources',
+    title: "Pages",
     links: [
-      { name: 'About', href: '/About' },
-      { name: 'My Work', href: '/work' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Vinyl Collection', href: 'https://collection.tydewest.com' },
+      { name: "About", href: "/about" },
+      { name: "My Work", href: "/work" },
+      { name: "Contact", href: "/contact" },
+      { name: "Vinyl Collection", href: "https://collection.tydewest.com" },
     ],
   },
   {
-    title: 'Socials',
+    title: "Socials",
     links: [
-      { name: 'Facebook', href: 'https://facebook.com/lachyschumacherdesign' },
-      { name: 'Instagram', href: 'https://instagram.com/lachyschumacherdesign' },
-      { name: 'Twitter', href: 'https://github.com/lachyschumacherdesign' },
-      { name: 'Dribbble', href: 'https://dribbble.com/lachyschumacherdesign' },
+      { name: "Facebook", href: "https://facebook.com/lachyschumacherdesign" },
+      { name: "Instagram", href: "https://instagram.com/lachyschumacherdesign" },
+      { name: "GitHub", href: "https://github.com/Tydewest" },
+      { name: "Dribbble", href: "https://dribbble.com/lachyschumacherdesign" },
     ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-24 sm:mt-32 lg:mt-40 px-6 lg:px-8 mx-auto max-w-7xl">
-      <div className="mx-auto max-w-2xl lg:max-w-none grid gap-y-16 gap-x-8 lg:grid-cols-2">
+    <footer
+      className="w-full px-6 lg:px-8 mx-auto max-w-7xl"
+      style={{ marginTop: "6rem", paddingBottom: "5rem" }}
+    >
+      {/* Top divider */}
+      <div className="w-full" style={{ height: "1px", background: "var(--border)" }} />
+
+      <div className="mx-auto max-w-2xl lg:max-w-none grid gap-y-12 gap-x-8 lg:grid-cols-2 pt-12">
+        {/* Brand block */}
         <div className="space-y-4">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-3">
             <Link href="/about">
               <Image
                 src="/avatar.jpg"
-                alt="Logo"
+                alt="Lachy Schumacher"
                 width={32}
                 height={32}
                 className="rounded-full object-cover"
                 priority
               />
             </Link>
-            <Link href="/" className="text-xl font-bold">
-              Lachy Schumacher Design.
+            <Link
+              href="/"
+              className="text-lg font-semibold tracking-tight"
+              style={{ color: "var(--foreground)" }}
+            >
+              Lachy Schumacher<span style={{ color: "var(--accent)" }}>.</span>
             </Link>
           </div>
-          <p className="text-sm">
-            We acknowledge the traditional owners and custodians of country throughout Australia and acknowledge their continuing connection to land, waters and community. We pay our respects to the people, the cultures and the elders past & present.
+          <p className="text-sm leading-relaxed" style={{ color: "var(--foreground-muted)" }}>
+            I acknowledge the traditional owners and custodians of country
+            throughout Australia and their continuing connection to land, waters
+            and community. I pay my respects to the people, the cultures and the
+            elders past &amp; present.
           </p>
         </div>
 
+        {/* Link columns */}
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-          {footerLinks.map(({ title, links }) => (
+          {FOOTER_SECTIONS.map(({ title, links }) => (
             <div key={title}>
-              <div className="font-display text-sm font-semibold tracking-wider">{title}</div>
-              <ul className="mt-4 text-sm space-y-4">
+              <div
+                className="text-xs font-semibold tracking-widest uppercase mb-4"
+                style={{ color: "var(--foreground)" }}
+              >
+                {title}
+              </div>
+              <ul className="text-sm space-y-3">
                 {links.map(({ name, href }) => (
-                  <li key={href}>
-                    <Link className="transition hover:text-emerald-500" href={href}>
+                  <li key={name}>
+                    <Link
+                      href={href}
+                      className="transition-colors duration-200"
+                      style={{ color: "var(--foreground-muted)" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "var(--foreground-muted)")}
+                      {...(href.startsWith("http")
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                    >
                       {name}
                     </Link>
                   </li>
@@ -75,20 +104,36 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t mt-24 pt-12 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 text-sm text-neutral-300">
-  <div>Copyright © 2020 – 2025 Lachy Schumacher Design. All rights reserved.</div>
-  <div>
-    Designed by{' '}
-    <Link className="text-emerald-500 hover:underline" href="https://tydewest.com" target="_blank" rel="noopener noreferrer">
-      Lachy Schumacher Design
-    </Link>
-    . Powered by{' '}
-    <Link className="text-emerald-500 hover:underline" href="https://dynaserve.io" target="_blank" rel="noopener noreferrer">
-      Dynaserve
-    </Link>
-    .
-  </div>
-</div>
+      {/* Bottom bar */}
+      <div
+        className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3 text-xs mt-16 pt-6"
+        style={{ borderTop: "1px solid var(--border)", color: "var(--foreground-subtle)" }}
+      >
+        <div>© 2020–2026 Lachy Schumacher Design. All rights reserved.</div>
+        <div>
+          Designed by{" "}
+          <Link
+            href="https://tydewest.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors duration-200"
+            style={{ color: "var(--accent)" }}
+          >
+            Lachy Schumacher
+          </Link>
+          . Powered by{" "}
+          <Link
+            href="https://dynaserve.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors duration-200"
+            style={{ color: "var(--accent)" }}
+          >
+            Dynaserve
+          </Link>
+          .
+        </div>
+      </div>
     </footer>
   );
 }
